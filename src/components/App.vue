@@ -1,5 +1,6 @@
-<template>
-  <h1>{{title}} hh</h1>
+<template lang="pug">
+  div
+    h1 {{title}}
 </template>
 
 <script>
