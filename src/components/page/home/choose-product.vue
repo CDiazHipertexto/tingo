@@ -199,8 +199,9 @@
       max-width: 400px
   .swiper
     width: 100%
-    height: 700px
+    height: 600px
     cursor: grab
+    max-width: 500px
   .swiper-slide
     text-align: center
     font-size: 18px

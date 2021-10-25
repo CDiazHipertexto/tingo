@@ -133,6 +133,7 @@ export default {
     border: 1px solid #606874
     border-radius: 10px
     padding: .6em
+    max-width: 490px
     p.title
       font-size: 1.2em
       font-weight: 800
