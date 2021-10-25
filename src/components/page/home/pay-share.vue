@@ -8,26 +8,33 @@
               b-container.container-fluid.p-1
                 b-row.justify-content-between.align-items-center.p-2
                   b-col(sm='12', md='6', lg='6', xl='6')
-                    img(src='@/assets/img-fruit.png', alt='up', width='100%')
+                    img(src='@/assets/food-dog.png', alt='up', width='100%')
                   b-col.text-left(sm='12', md='6', lg='6', xl='6')
-                    p.title Snacks para perro
-                    p.txt-und 1 Und
                     div.line-secon.p-2
-                      div.wrapper-price
-                        div.box-price
-                          p.text-uppercase.text-shop Compra con un amigo
-                          p.price-pack $4.800
-                          p.price-uni UNIDAD A: $4.800
-                        div.wrapper-dtc
-                          p.max-dtc -50%
+                      div.wrapper-perfil
+                        div.wrapper-img
+                          img.avatar(src='@/assets/user-luis.jpeg', alt='up', width='100%')
+                        div.box-twitt
+                          p.text-uppercase.text-name @LuisKMart
+                          p.price-pack
+                            strong 35%DTO!
+                            | ¿Quién se une a la compra conmigo?
                     div.line-secon.p-2.mt-1
-                      div.wrapper-price
-                        div.box-price
-                          p.text-uppercase.text-shop Compra con un amigo
-                          p.price-pack $4.800
-                          p.price-uni UNIDAD A: $4.800
-                        div.wrapper-dtc
-                          p -15%
+                      div.wrapper-perfil
+                        div.wrapper-img
+                          img.avatar(src='@/assets/user-maria.jpeg', alt='up', width='100%')
+                        div.box-twitt
+                          p.text-uppercase.text-name @LuisKMart
+                          p.price-pack
+                            strong 35%DTO!
+                            | ¿Quién se une a la compra conmigo?
+                    div.line-secon.p-2.mt-1
+                      div.wrapper-perfil
+                        div.wrapper-img
+                          img.avatar(src='@/assets/user-arbolito.jpeg', alt='up', width='100%')
+                        div.box-twitt
+                          p.text-uppercase.text-name @LuisKMart
+                          p.price-pack La comida para mi mascota ❤️
          b-col(xl='6', lg='6', md='12', sm='12', cols='12').flex-column.d-flex.justify-content-center
           section-heading
             template(slot='text-heading')
@@ -69,6 +76,8 @@ export default {
     margin-top: 2em
     max-width: 400px
   .wrapper-card
+    border: 1px solid #606874
+    border-radius: 10px
     p.title
       font-size: 1.2em
       font-weight: 800
@@ -77,26 +86,25 @@ export default {
       font-size: .9em
       font-weight: 300
     .line-secon
-      border: 0.785729px solid #808080
-      border-radius: 10px
-      padding: .5em
-      .wrapper-price
+      margin-top: 1em
+      .wrapper-perfil
         display: flex
         align-items: center
         p
           margin: 0
-        .box-price
-          .text-shop
-            font-size: .81em
+        .box-twitt
+          font-size: 12px
+          .text-name
+            font-size: 1em
+            font-weight: 800
           .price-pack
-            font-size: 1.5em
+            font-size: 1em
           .price-uni
             font-size: .6em
-      .wrapper-dtc
-        p
-          font-size: 1.5em
-          &.max-dtc
-            color: $blueLightHex
+      .wrapper-img
+        img
+          width: 50px
+          margin-right: .5em
   img
     display: block
     width: 100%
