@@ -12,39 +12,55 @@
                 .swiper.mySwiper
                   .swiper-wrapper
                     .swiper-slide
-                      div.w-100
+                      div.w-100.wrapper-card
                         b-container.container-fluid.p-1
                           b-row.justify-content-between.align-items-center.p-2
                             b-col(sm='12', md='6', lg='6', xl='6')
                               img(src='@/assets/img-fruit.png', alt='up', width='100%')
                             b-col.text-left(sm='12', md='6', lg='6', xl='6')
-                              p Snacks para perro
+                              p.title Snacks para perro
                               p.txt-und 1 Und
                               div.line-secon.p-2
-                                div
-                                  div
+                                div.wrapper-price
+                                  div.box-price
                                     p.text-uppercase.text-shop Compra con un amigo
-                                    p $4.800
-                                    p UNIDAD A: $4.800
-                                  div
-                                    p -50%
+                                    p.price-pack $4.800
+                                    p.price-uni UNIDAD A: $4.800
+                                  div.wrapper-dtc
+                                    p.max-dtc -50%
+                              div.line-secon.p-2.mt-1
+                                div.wrapper-price
+                                  div.box-price
+                                    p.text-uppercase.text-shop Compra con un amigo
+                                    p.price-pack $4.800
+                                    p.price-uni UNIDAD A: $4.800
+                                  div.wrapper-dtc
+                                    p -15%
                     .swiper-slide
-                      div.w-100
+                      div.w-100.wrapper-card
                         b-container.container-fluid.p-1
                           b-row.justify-content-between.align-items-center.p-2
                             b-col(sm='12', md='6', lg='6', xl='6')
                               img(src='@/assets/img-fruit.png', alt='up', width='100%')
                             b-col.text-left(sm='12', md='6', lg='6', xl='6')
-                              p Snacks para perro
+                              p.title Snacks para perro
                               p.txt-und 1 Und
                               div.line-secon.p-2
-                                div
-                                  div
+                                div.wrapper-price
+                                  div.box-price
                                     p.text-uppercase.text-shop Compra con un amigo
-                                    p $4.800
-                                    p UNIDAD A: $4.800
-                                  div
-                                    p -50%
+                                    p.price-pack $4.800
+                                    p.price-uni UNIDAD A: $4.800
+                                  div.wrapper-dtc
+                                    p.max-dtc -50%
+                              div.line-secon.p-2.mt-1
+                                div.wrapper-price
+                                  div.box-price
+                                    p.text-uppercase.text-shop Compra con un amigo
+                                    p.price-pack $4.800
+                                    p.price-uni UNIDAD A: $4.800
+                                  div.wrapper-dtc
+                                    p -15%
                     .swiper-slide Slide 3
                     .swiper-slide Slide 4
                     .swiper-slide Slide 5
@@ -52,7 +68,7 @@
                     .swiper-slide Slide 7
                     .swiper-slide Slide 8
                     .swiper-slide Slide 9
-                  .swiper-pagination
+                  //.swiper-pagination
 </template>
 
 <script>
@@ -123,7 +139,35 @@
     border: 1px solid #606874
     border-radius: 20px
     height: auto !important
-
+    .wrapper-card
+      p.title
+        font-size: 1.2em
+        font-weight: 800
+        margin: 0
+      .txt-und
+        font-size: .9em
+        font-weight: 300
+      .line-secon
+        border: 0.785729px solid #808080
+        border-radius: 10px
+        padding: .5em
+        .wrapper-price
+          display: flex
+          align-items: center
+          p
+            margin: 0
+          .box-price
+            .text-shop
+              font-size: .81em
+            .price-pack
+              font-size: 1.5em
+            .price-uni
+              font-size: .6em
+        .wrapper-dtc
+          p
+            font-size: 1.5em
+            &.max-dtc
+              color: $blueLightHex
     img
       display: block
       width: 100%
