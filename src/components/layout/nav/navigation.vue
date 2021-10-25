@@ -75,10 +75,10 @@
         position: fixed
         top: 0
         z-index: 9999
-        background: rgb(255 255 255 / 77%)
+        background: rgb(28 32 48 / 30%)
         &.sticky
             box-shadow: 0 0 27px -14px #7b7b7b
-            background-color: #ffffff
+            background-color: rgb(255 255 255 / 84%)
             border-bottom: 1px solid #e4e4e4
             .btn-navigation
                 background: $blueLightHex

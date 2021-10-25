@@ -1,72 +1,14 @@
 <template lang="pug">
   //Portfolio
-  section#sectionDelivery.py__section
-    b-container.text-left
+  section#sectionDelivery.py__section.bg-dark
+    b-container.text-white.text-left
       b-row(align-v='left')#sectionTitle
-        b-col(xl='6', lg='6', md='12', sm='12', cols='12')
-          div.w-100.wrapper-card
-            b-container.container-fluid.p-1
-              b-row.justify-content-between.align-items-center.p-2
-                b-col(sm='12', md='6', lg='6', xl='6')
-                  div.col-data-product
-                    img(src='@/assets/food-dog.png', alt='up', width='100%')
-                    p.txt-title Comida para perro
-                    p.txt-uni 24 Und
-                    div.line
-                      div.box-item
-                        p.text-intro Compra con amigo
-                        p.txt-price
-                          strong $8.750
-                        p.txt-uni UNIDAD A: $ 244
-                      div
-                        p.txt-dtc -35%
-                b-col.text-left(sm='12', md='6', lg='6', xl='6')
-                  div.line-secon.p-2
-                    div.wrapper-perfil
-                      div.wrapper-img
-                        img.avatar(src='@/assets/user-luis.jpeg', alt='up', width='100%')
-                      div.box-twitt
-                        p.text-uppercase.text-name @LuisKMart
-                        p.price-pack
-                          strong 35%DTO!
-                          | ¿Quién se une a la compra conmigo?
-                  div.line-secon.p-2.mt-1
-                    div.wrapper-perfil
-                      div.wrapper-img
-                        img.avatar(src='@/assets/user-maria.jpeg', alt='up', width='100%')
-                      div.box-twitt
-                        p.text-uppercase.text-name @LuisKMart
-                        p.price-pack
-                          strong 35%DTO!
-                          | ¿Quién se une a la compra conmigo?
-                  div.line-secon.p-2.mt-1
-                    div.wrapper-perfil
-                      div.wrapper-img
-                        img.avatar(src='@/assets/user-arbolito.jpeg', alt='up', width='100%')
-                      div.box-twitt
-                        p.text-uppercase.text-name @LuisKMart
-                        p.price-pack La comida para mi mascota ❤️
-                  div.social-share.p-2.mt-1
-                    div.wrapper-social
-                      p Compartir en
-                      ul
-                        li
-                          a
-                            img.avatar(src='@/assets/wp.png', alt='up', width='10px')
-                        li
-                          a
-                            img.avatar(src='@/assets/fb.png', alt='up', width='10px')
-                        li
-                          a
-                            img.avatar(src='@/assets/ms.png', alt='up', width='10px')
         b-col(xl='6', lg='6', md='12', sm='12', cols='12').flex-column.d-flex.justify-content-center
           section-heading
             template(slot='text-heading')
-              h2 Paga y comparte
-          p.text-prg
-            p.m-0
-              strong Comparte tu compra con un amigo.
-            | Tienen 2 horas para completar la compra con amigos y recibir el mayor descuento para ambos compradores.
+              h2 Entrega inmediata
+          p.text-prg Haz seguimiento de tu compra, recibe tu producto en minutos y disfruta de descuentos comprando en la red social de los ¡Ahorradores!
+        b-col(xl='6', lg='6', md='12', sm='12', cols='12')
 
 </template>
 
@@ -93,6 +35,8 @@ export default {
 
 <style lang="sass" scoped>
 @import "../../../scss/utilities/variables"
+.bg-dark
+  background-color: $greenDarkHex !important
 #sectionDelivery
   .col-data-product
     p

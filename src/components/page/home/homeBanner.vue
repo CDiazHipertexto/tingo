@@ -212,8 +212,11 @@
             .default
                 background-color: $blueLightHex
         &--fixed-height
-            height: 65vh
+            min-height: 56vh
+            height: 56vh
             z-index: 2
+            .vueperslides__inner
+              min-height: inherit !important
         &__arrow
             color: #fff
             svg
