@@ -212,7 +212,7 @@
             .default
                 background-color: $blueLightHex
         &--fixed-height
-            min-height: 56vh
+            min-height: 70vh
             height: 56vh
             z-index: 2
             .vueperslides__inner

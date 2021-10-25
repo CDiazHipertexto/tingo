@@ -57,6 +57,8 @@
         font-weight: 600
         text-align: left
         margin-left: 1em
+      p 
+        color: #1C2030
     .text-left
       text-align: left
       font-size: 1.5em
