@@ -12,7 +12,7 @@
                 .swiper.mySwiper
                   .swiper-wrapper
                     .swiper-slide
-                      div.bg-dark
+                      div.w-100
                         b-container.container-fluid.p-1
                           b-row.justify-content-between.align-items-center.p-2
                             b-col(sm='12', md='6', lg='6', xl='6')
@@ -28,7 +28,23 @@
                                     p UNIDAD A: $4.800
                                   div
                                     p -50%
-                    .swiper-slide Slide 2
+                    .swiper-slide
+                      div.w-100
+                        b-container.container-fluid.p-1
+                          b-row.justify-content-between.align-items-center.p-2
+                            b-col(sm='12', md='6', lg='6', xl='6')
+                              img(src='@/assets/img-fruit.png', alt='up', width='100%')
+                            b-col.text-left(sm='12', md='6', lg='6', xl='6')
+                              p Snacks para perro
+                              p.txt-und 1 Und
+                              div.line-secon.p-2
+                                div
+                                  div
+                                    p.text-uppercase.text-shop Compra con un amigo
+                                    p $4.800
+                                    p UNIDAD A: $4.800
+                                  div
+                                    p -50%
                     .swiper-slide Slide 3
                     .swiper-slide Slide 4
                     .swiper-slide Slide 5
@@ -106,6 +122,7 @@
     align-items: center
     border: 1px solid #606874
     border-radius: 20px
+    height: auto !important
 
     img
       display: block
