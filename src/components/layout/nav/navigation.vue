@@ -7,12 +7,12 @@
                     logo-pasalapagina
                 button.navbar-toggler.navbar-toggler-right
                     span.navbar-toggler-icon
-                #navbarResponsive.collapse.navbar-collapse.text-right
+                #navbarResponsive.collapse.navbar-collapse.text-right(type='button' data-toggle='collapse' data-target='#navbarResponsive' aria-controls='navbarResponsive' aria-expanded='false' aria-label='Toggle navigation')
                     ul.navbar-nav.ml-auto.my-2.my-lg-0
                         li.nav-item
                             button-href-comp(:href="href").button.btn.large.btn-navigation
                                 template(slot='txt')
-                                    | Text
+                                    | CUAS NONA
 </template>
 
 <script>
@@ -67,6 +67,7 @@
         position: fixed
         top: 0
         z-index: 9999
+        background: rgb(28 32 48 / 30%)
         &.sticky
             box-shadow: 0 0 27px -14px #7b7b7b
             background-color: #ffffff
