@@ -9,6 +9,7 @@
         choose-product
         pay-share
         immedi-delivery
+        cta-home-two
 </template>
 
 <script>
@@ -19,10 +20,11 @@ import categories from "@/components/page/home/categories";
 import chooseProduct from "@/components/page/home/choose-product";
 import payShare from "@/components/page/home/pay-share";
 import immediDelivery from "@/components/page/home/immedi-delivery";
+import ctaHomeTwo from "@/components/page/home/cta-home-two";
 
 export default {
   name: 'home-one',
-  components: {navigation, homeBanner, categories, chooseProduct, payShare, immediDelivery},
+  components: {navigation, homeBanner, categories, chooseProduct, payShare, immediDelivery, ctaHomeTwo},
   data() {
     return {
 
