@@ -1,5 +1,10 @@
 # tingo
 
+## Folder
+```
+cd tingo
+```
+
 ## Project setup
 ```
 npm install
