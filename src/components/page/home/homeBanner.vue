@@ -65,11 +65,20 @@
                                 b-col.text-left(sm='12', md='6', lg='6', xl='6')
                                   p Audífonos  Boots.
                                   p.txt-und 1 Und
-                                  div.line-secon.p-2
+                                  div.line-secon
                                     div
                                       p.text-uppercase.text-shop Compra con un amigo
-                                      p $64.350
-                                      p -50%
+                                      p.txt-price $64.350
+                                      p.txt-und UNIDAD A: $64.350
+                                    div
+                                      p.dtc.extra -50%
+                                  div.line-secon.mt-2
+                                    div
+                                      p.text-uppercase.text-shop Compra con un amigo
+                                      p.txt-price $64.350
+                                      p.txt-und UNIDAD A: $64.350
+                                    div
+                                      p.dtc -50%
 
 
 </template>
@@ -124,6 +133,7 @@
 
 
   .line
+    background: rgb(28 32 48 / 58%)
     border: 3px solid $blueLightHex
     max-width: 330px
     min-height: 535px
@@ -141,22 +151,36 @@
       text-align: left
       align-content: center
       align-items: center
-      margin-bottom: .8esm
+      margin-bottom: .8em
+      font-size: .81em
       img.avatar
         margin-right: .5em
     .bg-dark
       background-color: $greenDarkHex !important
       border-radius: 10px
       border: 1px solid rgba(255, 255, 255, 0.32)
+      .extra
+        color: #00FFA2
+      p
+        margin: 0
       .text-shop
-        font-size: .8em
+        font-size: .5em
+      .txt-price
+        font-size: 1em
       .txt-und
-        font-size: .71em
+        font-size: .4em
+      .dtc
+        font-size: 1.5em
       .text-left
         text-align: left
       .line-secon
         border: 1px solid #ffffff61
         border-radius: 5px
+        display: flex
+        padding: 0.61em .3em
+        margin-top: 0.51em
+        align-items: center
+        justify-content: space-between
         .price
           display: flex
           flex-direction: row
@@ -213,7 +237,7 @@
                 background-color: $blueLightHex
         &--fixed-height
             min-height: 70vh
-            height: 56vh
+            height: 70vh
             z-index: 2
             .vueperslides__inner
               min-height: inherit !important
