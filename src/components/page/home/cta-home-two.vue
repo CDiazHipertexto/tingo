@@ -1,13 +1,13 @@
 <template lang="pug">
   //Portfolio
-  section#sectionViewHome.py__section.bg-dark
-    b-container.text-white.text-left
+  section#sectionViewHome.py__section
+    b-container.text-left
       b-row(align-v='left')#sectionTitle
         b-col(xl='12', lg='12', md='12', sm='12', cols='12').flex-column.d-flex.justify-content-center
           section-heading
             template(slot='text-heading')
               h2.text-center CLICK PARA VER HOME 2
-          button-href-comp(href="").button
+          button-href-comp(href="").button.mt-4
             template(slot='txt')
               i.fas.fa-envelope
               span HOME DOS
