@@ -2,25 +2,28 @@
     // Navigation
     nav#mainNav(:class='{sticky:active}').navbar-light.navbar-expand-lg.navbar
         #nav-container.container(:class='toggleNavClass()')
-            .container
+            .container.d-flex.justify-content-between
                 a.navbar-brand.js-scroll-trigger(href='page-top')
-                    logo-pasalapagina
+                    logoTingo
                 button.navbar-toggler.navbar-toggler-right
                     span.navbar-toggler-icon
-                #navbarResponsive.collapse.navbar-collapse.text-right(type='button' data-toggle='collapse' data-target='#navbarResponsive' aria-controls='navbarResponsive' aria-expanded='false' aria-label='Toggle navigation')
+                #navbarResponsive.collapse.navbar-collapse.text-right.justify-content-end(type='button' data-toggle='collapse' data-target='#navbarResponsive' aria-controls='navbarResponsive' aria-expanded='false' aria-label='Toggle navigation')
                     ul.navbar-nav.ml-auto.my-2.my-lg-0
                         li.nav-item
-                            button-href-comp(:href="href").button.btn.large.btn-navigation
+                            button-href-comp(href="href").button.btn.large.btn-navigation
                                 template(slot='txt')
-                                    | CUAS NONA
+                                    | 0
 </template>
 
 <script>
+
+
+    import logoTingo from "../../elements/icons/logoTingo";
     import IconPc from "../../elements/icons/IconPc";
     import ButtonComp from "../../elements/Ui/Button/buttonComp";
     import ButtonHrefComp from "../../elements/Ui/Button/buttonHrefComp";
     export default {
-        components: {ButtonHrefComp, ButtonComp, IconPc },
+        components: {ButtonHrefComp, ButtonComp, IconPc, logoTingo },
         name: 'navigation',
         data() {
             return {
@@ -55,8 +58,13 @@
     @import "../../../scss/utilities/variables"
     #mainNav *
         transition: all .6s ease
+    .navbar-brand
+      padding: .8em
+      background: $greenDarkHex
+      width: auto
+      border-radius: 12px
     .nav
-        padding: 25px 0
+        padding: 0
     .sticky-nav
         padding: 0
         svg
