@@ -5,6 +5,10 @@
             .container.d-flex.justify-content-between
                 a.navbar-brand.js-scroll-trigger(href='page-top')
                     logoTingo
+                form#search(action='#')
+                  label.search-label(data-state='open', for='search')
+                    input(type='text', placeholder='Busca en TinGo')
+                    i.fa.fa-search(aria-hidden='true')
                 button.navbar-toggler.navbar-toggler-right
                     span.navbar-toggler-icon
                 #navbarResponsive.collapse.navbar-collapse.text-right.justify-content-end(type='button' data-toggle='collapse' data-target='#navbarResponsive' aria-controls='navbarResponsive' aria-expanded='false' aria-label='Toggle navigation')
@@ -55,6 +59,15 @@
 </script>
 <style scoped  lang="sass">
     @import "../../../scss/utilities/variables"
+    #search
+      margin: 0
+      padding: 0
+      display: flex
+      align-items: center
+      label
+        position: relative
+        i
+          background-color: blue
     #mainNav *
         transition: all .6s ease
     .navbar-brand

@@ -72,6 +72,11 @@
           img
             background: #F8F8F9
             border-radius: 20px
+            transition: .3s !important
+            &:hover
+              transform: translate3d(0, -2px, 0) !important
+              box-shadow: 0 18px 35px rgb(50 50 93 / 1%), 0 8px 15px rgb(0 0 0 / 7%) !important
+              transition: .3s !important
           p
             color: #1C2030
             margin-top: 1em
