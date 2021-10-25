@@ -22,7 +22,7 @@
           .vueperslide.vueperslide__content-wrapper
             b-container
               b-row.justify-content-between.align-items-center
-                b-col(sm='12', md='6', lg='6', xl='6')
+                b-col(sm='12', md='12', lg='6', xl='6')
                   div()
                     .vueperslide__title
                       div.wysiwyg
@@ -30,7 +30,7 @@
                     .vueperslide__content
                       div.wysiwyg
                         div.left(v-html='slide.content')
-                b-col(sm='12', md='6', lg='6', xl='6')
+                b-col(sm='12', md='12', lg='6', xl='6')
                   div.line
                     b-container.container-fluid.p-0
                       b-row.justify-content-between.align-items-end

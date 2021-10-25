@@ -3,22 +3,54 @@
     section#sectionVideoCorp.py__section.bg-dark
         b-container.text-white.text-left
             b-row(align-v='left')#sectionTitle
-              b-col(xl='6', lg='6', md='12', sm='12', cols='12')
+              b-col(xl='6', lg='6', md='12', sm='12', cols='12').flex-column.d-flex.justify-content-center
                 section-heading
                     template(slot='text-heading')
                         h2 Elige tu producto
+                p En TinGo encuentras productos con dos precios. Puedes comprar con un amigo o comprar de forma individual. Al comprar con un amigo cada uno el mismo producto, reciben un descuento mayor para ambos.
               b-col(xl='6', lg='6', md='12', sm='12', cols='12')
+                .swiper.mySwiper
+                  .swiper-wrapper
+                    .swiper-slide
+                      div.bg-dark
+                        b-container.container-fluid.p-1
+                          b-row.justify-content-between.align-items-center.p-2
+                            b-col(sm='12', md='6', lg='6', xl='6')
+                              img(src='@/assets/img-fruit.png', alt='up', width='100%')
+                            b-col.text-left(sm='12', md='6', lg='6', xl='6')
+                              p Snacks para perro
+                              p.txt-und 1 Und
+                              div.line-secon.p-2
+                                div
+                                  div
+                                    p.text-uppercase.text-shop Compra con un amigo
+                                    p $4.800
+                                    p UNIDAD A: $4.800
+                                  div
+                                    p -50%
+                    .swiper-slide Slide 2
+                    .swiper-slide Slide 3
+                    .swiper-slide Slide 4
+                    .swiper-slide Slide 5
+                    .swiper-slide Slide 6
+                    .swiper-slide Slide 7
+                    .swiper-slide Slide 8
+                    .swiper-slide Slide 9
+                  .swiper-pagination
 </template>
 
 <script>
     import ButtonComp from "../../elements/Ui/Button/buttonComp"
     import SectionHeading from "../../layout/heading/sectionHeading";
+
+
     export default {
         name: 'choose-product',
-        components: {ButtonComp, SectionHeading},
+        components: {ButtonComp, SectionHeading, Swiper,},
         data: () => ({
 
         }),
+
         methods: {
             acces () {
                 console.log ( "Acces home")
@@ -27,19 +59,59 @@
                 console.log("bar");
             }
         },
+      mounted() {
+        let swiper = new Swiper(".mySwiper", {
+          slidesPerView: 2+1/3,
+          direction: "vertical",
+          spaceBetween: 10,
+          centeredSlides: false,
+          autoplay: {
+            delay: 111112500,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      }
     }
 </script>
 
 <style lang="sass" scoped>
   @import "../../../scss/utilities/variables"
   .bg-dark
-    background-color: $greenDarkHex
+    background-color: $greenDarkHex !important
   .py__section
     padding-bottom: 0
     padding-top: 0
   #sectionVideoCorp
     .text-left
       text-align: left
+  .swiper
+    width: 100%
+    height: 400px
+
+  .swiper-slide
+    text-align: center
+    font-size: 18px
+    background: transparent
+    display: flex
+    -webkit-box-pack: center
+    justify-content: center
+    align-items: center
+    border: 1px solid #606874
+    border-radius: 20px
+
+    img
+      display: block
+      width: 100%
+      height: 100%
+      object-fit: cover
 </style>
 
 <style lang="sass">
