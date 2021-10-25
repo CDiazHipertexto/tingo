@@ -75,7 +75,7 @@
         position: fixed
         top: 0
         z-index: 9999
-        background: rgb(28 32 48 / 30%)
+        background: rgb(255 255 255 / 77%)
         &.sticky
             box-shadow: 0 0 27px -14px #7b7b7b
             background-color: #ffffff

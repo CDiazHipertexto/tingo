@@ -7,7 +7,9 @@
                 section-heading
                     template(slot='text-heading')
                         h2 Elige tu producto
-                p En TinGo encuentras productos con dos precios. Puedes comprar con un amigo o comprar de forma individual. Al comprar con un amigo cada uno el mismo producto, reciben un descuento mayor para ambos.
+                p.text-prg En TinGo encuentras productos con dos precios. Puedes comprar con un amigo o comprar de forma individual.
+                  strong  Al comprar con un amigo
+                  | cada uno el mismo producto, reciben un descuento mayor para ambos.
               b-col(xl='6', lg='6', md='12', sm='12', cols='12')
                 .swiper.mySwiper
                   .swiper-wrapper
@@ -61,13 +63,81 @@
                                     p.price-uni UNIDAD A: $4.800
                                   div.wrapper-dtc
                                     p -15%
-                    .swiper-slide Slide 3
-                    .swiper-slide Slide 4
-                    .swiper-slide Slide 5
-                    .swiper-slide Slide 6
-                    .swiper-slide Slide 7
-                    .swiper-slide Slide 8
-                    .swiper-slide Slide 9
+                    .swiper-slide
+                      div.w-100.wrapper-card
+                        b-container.container-fluid.p-1
+                          b-row.justify-content-between.align-items-center.p-2
+                            b-col(sm='12', md='6', lg='6', xl='6')
+                              img(src='@/assets/img-fruit.png', alt='up', width='100%')
+                            b-col.text-left(sm='12', md='6', lg='6', xl='6')
+                              p.title Snacks para perro
+                              p.txt-und 1 Und
+                              div.line-secon.p-2
+                                div.wrapper-price
+                                  div.box-price
+                                    p.text-uppercase.text-shop Compra con un amigo
+                                    p.price-pack $4.800
+                                    p.price-uni UNIDAD A: $4.800
+                                  div.wrapper-dtc
+                                    p.max-dtc -50%
+                              div.line-secon.p-2.mt-1
+                                div.wrapper-price
+                                  div.box-price
+                                    p.text-uppercase.text-shop Compra con un amigo
+                                    p.price-pack $4.800
+                                    p.price-uni UNIDAD A: $4.800
+                                  div.wrapper-dtc
+                                    p -15%
+                    .swiper-slide
+                      div.w-100.wrapper-card
+                        b-container.container-fluid.p-1
+                          b-row.justify-content-between.align-items-center.p-2
+                            b-col(sm='12', md='6', lg='6', xl='6')
+                              img(src='@/assets/img-fruit.png', alt='up', width='100%')
+                            b-col.text-left(sm='12', md='6', lg='6', xl='6')
+                              p.title Snacks para perro
+                              p.txt-und 1 Und
+                              div.line-secon.p-2
+                                div.wrapper-price
+                                  div.box-price
+                                    p.text-uppercase.text-shop Compra con un amigo
+                                    p.price-pack $4.800
+                                    p.price-uni UNIDAD A: $4.800
+                                  div.wrapper-dtc
+                                    p.max-dtc -50%
+                              div.line-secon.p-2.mt-1
+                                div.wrapper-price
+                                  div.box-price
+                                    p.text-uppercase.text-shop Compra con un amigo
+                                    p.price-pack $4.800
+                                    p.price-uni UNIDAD A: $4.800
+                                  div.wrapper-dtc
+                                    p -15%
+                    .swiper-slide
+                      div.w-100.wrapper-card
+                        b-container.container-fluid.p-1
+                          b-row.justify-content-between.align-items-center.p-2
+                            b-col(sm='12', md='6', lg='6', xl='6')
+                              img(src='@/assets/img-fruit.png', alt='up', width='100%')
+                            b-col.text-left(sm='12', md='6', lg='6', xl='6')
+                              p.title Snacks para perro
+                              p.txt-und 1 Und
+                              div.line-secon.p-2
+                                div.wrapper-price
+                                  div.box-price
+                                    p.text-uppercase.text-shop Compra con un amigo
+                                    p.price-pack $4.800
+                                    p.price-uni UNIDAD A: $4.800
+                                  div.wrapper-dtc
+                                    p.max-dtc -50%
+                              div.line-secon.p-2.mt-1
+                                div.wrapper-price
+                                  div.box-price
+                                    p.text-uppercase.text-shop Compra con un amigo
+                                    p.price-pack $4.800
+                                    p.price-uni UNIDAD A: $4.800
+                                  div.wrapper-dtc
+                                    p -15%
                   //.swiper-pagination
 </template>
 
@@ -98,7 +168,7 @@
           spaceBetween: 10,
           centeredSlides: false,
           autoplay: {
-            delay: 111112500,
+            delay: 2500,
             disableOnInteraction: false,
           },
           pagination: {
@@ -124,9 +194,12 @@
   #sectionVideoCorp
     .text-left
       text-align: left
+    .text-prg
+      margin-top: 2em
+      max-width: 400px
   .swiper
     width: 100%
-    height: 400px
+    height: 700px
 
   .swiper-slide
     text-align: center
@@ -137,7 +210,7 @@
     justify-content: center
     align-items: center
     border: 1px solid #606874
-    border-radius: 20px
+    border-radius: 10px
     height: auto !important
     .wrapper-card
       p.title

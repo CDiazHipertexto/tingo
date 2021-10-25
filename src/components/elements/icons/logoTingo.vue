@@ -58,7 +58,8 @@
         transition: .7s
         padding: 0
         svg
-            width: 18rem !important
+            width: 2em !important
+            height: 2em
             .st1, .st2
                 transition: 1s
                 fill: $blueLightHex !important

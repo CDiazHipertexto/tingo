@@ -31,12 +31,10 @@
     import IconBase from "../../elements/icons/IconBase";
     import IconMoney from "../../elements/icons/IconMoney";
     import IconPc from "../../elements/icons/IconPc";
-    import BenefitsPay from "./benefitsPay";
-    import ReadBenefitsPlans from "./readBenefits";
 
     export default {
         name: "categories",
-        components: { ReadBenefitsPlans, BenefitsPay, IconPc, IconMoney, IconBase, IconGlasses, VueMaterial, TabsPlugin },
+        components: { IconPc, IconMoney, IconBase, IconGlasses, VueMaterial, TabsPlugin },
         data: () => ({
 
         }),

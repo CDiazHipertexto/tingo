@@ -30,7 +30,4 @@
     @import "../../../scss/utilities/variables"
     h2
       font-size: 2.8em
-    p
-      margin-top: 2em
-      max-width: 450px
 </style>

@@ -7,6 +7,7 @@
         home-banner
         categories
         choose-product
+        pay-share
 </template>
 
 <script>
@@ -15,10 +16,11 @@ import navigation from '@/components/layout/nav/navigation';
 import homeBanner from "@/components/page/home/homeBanner";
 import categories from "@/components/page/home/categories";
 import chooseProduct from "@/components/page/home/choose-product";
+import payShare from "@/components/page/home/pay-share";
 
 export default {
   name: 'home-one',
-  components: {navigation, homeBanner, categories, chooseProduct},
+  components: {navigation, homeBanner, categories, chooseProduct, payShare},
   data() {
     return {
 
