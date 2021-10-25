@@ -5,6 +5,7 @@
     main.prehome
       article
         home-banner
+        categories
 </template>
 
 <script>

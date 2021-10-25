@@ -1,5 +1,5 @@
 <template lang="pug">
-  div
+  div#sectionBanner
     //b-col(sm='12', md='12', lg='12', xl='12')
       div()
         img(src='@/assets/arrrow-up.png', alt='up', width='15px')
@@ -33,8 +33,8 @@
                 b-col(sm='12', md='6', lg='6', xl='6')
                   div.line
                     b-container.container-fluid.p-0
-                      b-row.justify-content-between.align-items-center
-                        b-col(sm='10', md='10', lg='10', xl='10')
+                      b-row.justify-content-between.align-items-end
+                        b-col(sm='9', md='9', lg='9', xl='9')
                           div.wrapper-post
                             div.img
                               img.avatar(src='@/assets/user-arbolito.png', alt='up', width='30px')
@@ -47,20 +47,29 @@
                             div.content-perfil
                               p.user-name @arbolito
                               p.user-post ¡Quierooo un trago!
-                        b-col(sm='2', md='2', lg='2', xl='2')
-                          div
-                            img(src='@/assets/msg.png', alt='up', width='15px')
+                        b-col(sm='3', md='3', lg='3', xl='3')
+                          div.mb-2
+                            img.mb-3(src='@/assets/msg.png', alt='up', width='20px')
                             p 2
-                          div
-                            img(src='@/assets/arrrow-back.png', alt='up', width='15px')
+                          div.mb-2
+                            img.mb-3(src='@/assets/arrrow-back.png', alt='up', width='20px')
                             p 234
+                          div.mb-0
+                            img.mb-2(src='@/assets/img-user.png', alt='up', width='50px')
                         b-col(sm='12', md='12', lg='12', xl='12')
                           div.bg-dark
                             b-container.container-fluid.p-1
-                              b-row.justify-content-between.align-items-center
+                              b-row.justify-content-between.align-items-center.p-2
                                 b-col(sm='12', md='6', lg='6', xl='6')
                                     img(src='@/assets/img-fruit.png', alt='up', width='100%')
-                                b-col(sm='12', md='6', lg='6', xl='6')
+                                b-col.text-left(sm='12', md='6', lg='6', xl='6')
+                                  p Audífonos  Boots.
+                                  p.txt-und 1 Und
+                                  div.line-secon.p-2
+                                    div
+                                      p.text-uppercase.text-shop Compra con un amigo
+                                      p $64.350
+                                      p -50%
 
 
 </template>
@@ -83,18 +92,18 @@
               content: '<h1><strong style="">La red social de<br>los ahorradores.</strong></h1><p>El futuro de las compras en línea <span style="font-size: 1em;color: #BDFF00">está aquí.</span></p>',
               image: require('@/assets/hero-img-home.png')
             },
-            // {
-            //   id: 'slide-1',
-            //   title: '<h2 style="font-size: 1.3em;color: #BDFF00">Somos genials</h2>',
-            //   content: '<h1><strong style="">La red social de<br>los ahorradores.</strong></h1><p>El futuro de las compras en línea <span style="font-size: 1em;color: #BDFF00">está aquí.</span></p>',
-            //   image: require('@/assets/hero-img-home.png')
-            // },
-            // {
-            //   id: 'slide-1',
-            //   title: '<h2 style="font-size: 1.3em;color: #BDFF00">Somos genials</h2>',
-            //   content: '<h1><strong style="">La red social de<br>los ahorradores.</strong></h1><p>El futuro de las compras en línea <span style="font-size: 1em;color: #BDFF00">está aquí.</span></p>',
-            //   image: require('@/assets/hero-img-home.png')
-            // },
+            {
+              id: 'slide-1',
+              title: '<h2 style="font-size: 1.3em;color: #BDFF00;font-weight: 300;">Somos genials</h2>',
+              content: '<h1><strong style="">La red social de<br>los ahorradores.</strong></h1><p>El futuro de las compras en línea <span style="font-size: 1em;color: #BDFF00">está aquí.</span></p>',
+              image: require('@/assets/hero-img-home.png')
+            },
+            {
+              id: 'slide-1',
+              title: '<h2 style="font-size: 1.3em;color: #BDFF00;font-weight: 300;">Somos genials</h2>',
+              content: '<h1><strong style="">La red social de<br>los ahorradores.</strong></h1><p>El futuro de las compras en línea <span style="font-size: 1em;color: #BDFF00">está aquí.</span></p>',
+              image: require('@/assets/hero-img-home.png')
+            },
           ],
 
         }),
@@ -112,9 +121,11 @@
 </script>
 <style lang="sass" scoped>
   @import "../../../scss/utilities/variables"
+
+
   .line
     border: 3px solid $blueLightHex
-    max-width: 300px
+    max-width: 330px
     min-height: 535px
     margin: auto
     color: #ffff
@@ -137,9 +148,52 @@
       background-color: $greenDarkHex !important
       border-radius: 10px
       border: 1px solid rgba(255, 255, 255, 0.32)
+      .text-shop
+        font-size: .8em
+      .txt-und
+        font-size: .71em
+      .text-left
+        text-align: left
+      .line-secon
+        border: 1px solid #ffffff61
+        border-radius: 5px
+        .price
+          display: flex
+          flex-direction: row
+          align-content: center
+          justify-content: space-between
+          align-items: center
 </style>
 <style lang="sass">
     @import "../../../scss/utilities/variables"
+    #sectionBanner
+      position: relative
+      .vueperslide__content-wrapper
+        z-index: 2
+      .vueperslides__track-inner > .vueperslide
+        &:after
+          content: ""
+          display: block
+          width: 100%
+          height: 100%
+          position: absolute
+          bottom: 0
+          background: rgb(28 32 48 / 37%)
+          z-index: 0
+      .vueperslides__track:before
+        content: ""
+        display: block
+        width: 30px
+        height: 30px
+        position: absolute
+        background-image: url('../../../assets/arrrow-up.png')
+        background-position: center
+        background-repeat: no-repeat
+        bottom: 3em
+        left: 0
+        right: 0
+        z-index: 9
+        margin: auto
     .vueperslides
         &__bullet
             .default
@@ -156,9 +210,10 @@
                 opacity: 0.8
         &__bullet--active
             .default
-                background-color: #19b0d5
+                background-color: $blueLightHex
         &--fixed-height
             height: 65vh
+            z-index: 2
         &__arrow
             color: #fff
             svg
