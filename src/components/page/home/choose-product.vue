@@ -231,6 +231,7 @@
         .wrapper-price
           display: flex
           align-items: center
+          justify-content: space-around
           p
             margin: 0
           .box-price

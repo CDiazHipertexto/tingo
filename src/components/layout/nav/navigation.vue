@@ -8,15 +8,22 @@
                 form#search(action='#')
                   label.search-label(data-state='open', for='search')
                     input(type='text', placeholder='Busca en TinGo')
-                    i.fa.fa-search(aria-hidden='true')
+                    img(src='@/assets/search.png', alt='up', width='20px')
                 button.navbar-toggler.navbar-toggler-right
                     span.navbar-toggler-icon
                 #navbarResponsive.collapse.navbar-collapse.text-right.justify-content-end(type='button' data-toggle='collapse' data-target='#navbarResponsive' aria-controls='navbarResponsive' aria-expanded='false' aria-label='Toggle navigation')
                     ul.navbar-nav.ml-auto.my-2.my-lg-0
-                        li.nav-item
-                            button-href-comp(href="href").button.btn.large.btn-navigation
-                                template(slot='txt')
-                                    | 0
+                        li.nav-item.item-cart
+                          a
+                            img(src='@/assets/cart.svg', alt='up', width='20px')
+                            p 0
+                        li.nav-item.item-user
+                          a
+                            img(src='@/assets/user.svg', alt='up', width='20px')
+                            p 0
+                          //button-href-comp(href="href").button.btn.large.btn-navigation
+                              template(slot='txt')
+                                  | 0
 </template>
 
 <script>
@@ -66,10 +73,58 @@
       align-items: center
       label
         position: relative
-        i
-          background-color: blue
+        transition: all 1s ease
+        border-radius: 0
+        margin: 0
+        padding: 0
+        color: #fff
+        display: flex
+        align-items: center
+        img
+          position: absolute
+          left: 6px
+          width: 16px
+          z-index: 2
+        input
+          transition: width 1s ease, opacity 0.5s ease 0.5s
+          opacity: 1
+          width: 180px
+          height: 36px
+          border: 0
+          outline: none
+          color: #000000
+          margin: 0
+          top: auto
+          z-index: 1
+          padding: 0 0 0 2em
+          background: rgba(28, 32, 48, 0.5)
+          border-radius: 10px
+          &::placeholder
+            color: #ffffff
     #mainNav *
-        transition: all .6s ease
+      transition: all .6s ease
+      .navbar-nav
+        display: flex
+        align-items: center
+        align-content: center
+        li, a, p
+          display: flex
+          align-items: center
+          align-content: center
+          margin: 0
+          a
+            margin: 0 .5em
+            padding: 0.5em 1em
+            color: #1C2030
+        li.item-cart
+          a
+            background-color: #F8F8F9
+            border-radius: 5px
+        li.item-user
+          a
+            background-color: #F8F8F9
+            border-radius: 15px
+
     .navbar-brand
       padding: .8em
       background: $greenDarkHex
@@ -100,6 +155,12 @@
             .navbar
                 &-toggler-icon
                     background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 18 16' style='enable-background:new 0 0 18 16;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill-rule:evenodd;clip-rule:evenodd;fill:%230C3440;%7D%0A%3C/style%3E%3Cpath class='st0' d='M3,1c0-0.6,0.4-1,1-1h13c0.6,0,1,0.4,1,1c0,0.6-0.4,1-1,1H4C3.4,2,3,1.6,3,1z M7,15c0-0.6,0.4-1,1-1h9 c0.6,0,1,0.4,1,1s-0.4,1-1,1H8C7.4,16,7,15.6,7,15z M1,7C0.4,7,0,7.4,0,8s0.4,1,1,1h16c0.6,0,1-0.4,1-1s-0.4-1-1-1H1z'/%3E%3C/svg%3E") !important
+            #search
+              input
+                background-color: $greenDarkHex
+            .navbar-nav
+                a
+                  border: 1px solid #1C2030
         .btn-navigation
             background: rgba(0, 0, 0, 0.4)
             color: #ffffff
