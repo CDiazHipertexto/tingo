@@ -182,7 +182,7 @@
 </script>
 
 <style lang="sass">
-    @import "../../../../../sass/frontend/utilities/variables"
+    @import "../../../scss/utilities/variables"
     #tabletBenefits
         hr
             border: 0

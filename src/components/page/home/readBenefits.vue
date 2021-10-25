@@ -47,13 +47,13 @@
 </script>
 
 <style lang="sass">
-    @import "../../../../../sass/frontend/utilities/variables"
-    @import "../../../../../sass/frontend/utilities/mixins"
+    @import "../../../scss/utilities/variables"
+    @import "../../../scss/utilities/mixins"
     #sectionBenefitsRead
         hr
             display: none
         .sectionBenefitsRead
-            @include responsive(tab-port-767)
+            //@include media(tab-port-767)
                 &__item
                     &:nth-child(2)
                         margin-top: 2rem

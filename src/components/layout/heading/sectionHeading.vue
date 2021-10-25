@@ -1,14 +1,10 @@
 <template lang="pug">
     //Heading Text
-    b-row(align-v='center')#sectionTitle
-        b-col(xl='9', lg='9', md='8', sm='12', cols='12').sectionTitle--text
+    b-row(align-v='left')#sectionTitle
+        b-col(xl='12', lg='12', md='12', sm='12', cols='12').sectionTitle--text
             .sectionTitle__block
                 slot(name='text-heading')
-                    h4 {{ $t('message.hello') }}
-                hr.sectionTitle--line
-        b-col(xl='3', lg='3', md='4', sm='12', cols='12', align-self='start',).sectionTitle--button
-            slot(name='heading-text-btn')
-                button-comp(:eventClick='acces')
+                    h4 Texto
 </template>
 
 <script>
@@ -32,7 +28,6 @@
 
 <style scoped lang="sass">
     @import "../../../scss/utilities/variables"
-    h4
-        color: $greenDarkHex
-        text-transform: uppercase
+    h2
+      font-size: 2.8em
 </style>

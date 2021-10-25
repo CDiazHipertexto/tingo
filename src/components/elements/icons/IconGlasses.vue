@@ -60,7 +60,7 @@
 </script>
 
 <style scoped  lang="sass">
-    @import "../../../../../sass/frontend/utilities/variables"
+    @import "../../../scss/utilities/variables"
     #iconGlasses
         margin: 0 auto
         display: table

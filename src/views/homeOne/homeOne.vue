@@ -6,16 +6,19 @@
       article
         home-banner
         categories
+        choose-product
 </template>
 
 <script>
 
 import navigation from '@/components/layout/nav/navigation';
 import homeBanner from "@/components/page/home/homeBanner";
+import categories from "@/components/page/home/categories";
+import chooseProduct from "@/components/page/home/choose-product";
 
 export default {
   name: 'home-one',
-  components: {navigation, homeBanner},
+  components: {navigation, homeBanner, categories, chooseProduct},
   data() {
     return {
 

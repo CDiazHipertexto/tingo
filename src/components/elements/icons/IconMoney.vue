@@ -73,7 +73,7 @@
 </script>
 
 <style scoped  lang="sass">
-    @import "../../../../../sass/frontend/utilities/variables"
+    @import "../../../scss/utilities/variables"
     #iconMoney
         margin: 0 auto
         display: table

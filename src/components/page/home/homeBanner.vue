@@ -93,13 +93,13 @@
               image: require('@/assets/hero-img-home.png')
             },
             {
-              id: 'slide-1',
+              id: 'slide-2',
               title: '<h2 style="font-size: 1.3em;color: #BDFF00;font-weight: 300;">Somos genials</h2>',
               content: '<h1><strong style="">La red social de<br>los ahorradores.</strong></h1><p>El futuro de las compras en línea <span style="font-size: 1em;color: #BDFF00">está aquí.</span></p>',
               image: require('@/assets/hero-img-home.png')
             },
             {
-              id: 'slide-1',
+              id: 'slide-3',
               title: '<h2 style="font-size: 1.3em;color: #BDFF00;font-weight: 300;">Somos genials</h2>',
               content: '<h1><strong style="">La red social de<br>los ahorradores.</strong></h1><p>El futuro de las compras en línea <span style="font-size: 1em;color: #BDFF00">está aquí.</span></p>',
               image: require('@/assets/hero-img-home.png')

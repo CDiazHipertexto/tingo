@@ -1,34 +1,27 @@
 <template lang="pug">
     //Benefits Purchase
     section#sectionBenefits.py__section
-        b-container(fluid='')
+        b-container()
+            b-row.mb-5
+              b-col(sm='12', md='12', lg='12', xl='12')
+                h3.text-left Nuestras categorías
             b-row
-                b-col.sectionBenefits--padding-x
-                    b-tabs(content-class='mt-0 line--top', fill='', card='', no-body='')
-                        b-tab(no-body='', active='')
-                            template(v-slot:title='')
-                                icon-pc
-                                h6 {{ $t('home.cancel_whenever_want') }}
-                            b-container.bg-dark__PLP(fluid='')
-                                b-row
-                                    b-col(cols='12', lg='12')
-                                        benefits-pay
-                        b-tab(no-body='')
-                            template(v-slot:title='')
-                                icon-glasses
-                                h6 {{ $t('home.read_wherever_want') }}
-                            b-container.bg-dark__PLP(fluid='')
-                                b-row
-                                    b-col(cols='12', lg='12')
-                                        read-benefits-plans
-                        b-tab(no-body='')
-                            template(v-slot:title='')
-                                icon-money
-                                h6 {{ $t('home.pay_as_want') }}
-                            b-container.bg-dark__PLP(fluid='')
-                                b-row
-                                    b-col(cols='12', lg='12')
-                                        read-benefits-plans
+              b-col(sm='12', md='12', lg='12', xl='12')
+                div.wrapper-block.d-flex
+                  div.wrapper-products
+                    div.item-product
+                      img(src='@/assets/licores.png', alt='licores', width='100%')
+                      p Licores
+                    div.item-product
+                      img(src='@/assets/tecnologia.png', alt='tecnologia', width='100%')
+                      p Tecnología
+                    div.item-product
+                      img(src='@/assets/mascotas.png', alt='mascotas', width='100%')
+                      p Mascotas
+                  div.text-intro
+                    h2 La nueva forma de compra con amigos
+
+
 </template>
 
 <script>
@@ -42,34 +35,58 @@
     import ReadBenefitsPlans from "./readBenefits";
 
     export default {
-        name: "benefitsPurchase",
+        name: "categories",
         components: { ReadBenefitsPlans, BenefitsPay, IconPc, IconMoney, IconBase, IconGlasses, VueMaterial, TabsPlugin },
         data: () => ({
 
         }),
         mounted() {
 
-            this.keelItWithFire();
         },
         methods: {
-            keelItWithFire() {
-                document.querySelector(".card-header").classList.add("container");
-            }
+
         },
     }
 </script>
 
 <style scoped lang="sass">
-    @import "../../../../../sass/frontend/utilities/variables"
+    @import "../../../scss/utilities/variables"
     #sectionBenefits
-        .bg-dark__PLP
-            background: $greenDarkHex
-    .py__section
-        padding-bottom: 0
+      .bg-dark__PLP
+          background: $greenDarkHex
+      h2
+        font-size: 3em
+        font-weight: 600
+        text-align: left
+        margin-left: 1em
+    .text-left
+      text-align: left
+      font-size: 1.5em
+    .wrapper-block
+      display: flex
+      align-items: center
+      > div
+        width: 50%
+      .wrapper-products
+        display: flex
+        justify-content: space-between
+        .item-product
+          display: flex
+          flex-direction: column
+          img
+            background: #F8F8F9
+            border-radius: 20px
+          p
+            color: #1C2030
+            margin-top: 1em
+            font-size: 1.3em
+      .text-intro
+        display: flex
+
 </style>
 
 <style lang="sass">
-    @import "../../../../../sass/frontend/utilities/variables"
+    @import "../../../scss/utilities/variables"
     #sectionBenefits
         .line--top
             border-top: 3px solid $blueLightHex
