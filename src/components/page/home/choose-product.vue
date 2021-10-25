@@ -215,6 +215,8 @@
     height: auto !important
     .wrapper-card
       cursor: pointer
+      > .container
+        font-size: 13px
       p.title
         font-size: 1.2em
         font-weight: 800
@@ -245,7 +247,7 @@
               color: $blueLightHex
     img
       display: block
-      width: 100%
+      width: 17em
       height: 100%
       object-fit: cover
 </style>

@@ -27,14 +27,10 @@
 <script>
     import VueMaterial from 'vue-material'
     import { TabsPlugin } from 'bootstrap-vue'
-    import IconGlasses from "../../elements/icons/IconGlasses";
-    import IconBase from "../../elements/icons/IconBase";
-    import IconMoney from "../../elements/icons/IconMoney";
-    import IconPc from "../../elements/icons/IconPc";
 
     export default {
         name: "categories",
-        components: { IconPc, IconMoney, IconBase, IconGlasses, VueMaterial, TabsPlugin },
+        components: { VueMaterial, TabsPlugin },
         data: () => ({
 
         }),

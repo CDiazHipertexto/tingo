@@ -19,11 +19,10 @@
 
 
     import logoTingo from "../../elements/icons/logoTingo";
-    import IconPc from "../../elements/icons/IconPc";
     import ButtonComp from "../../elements/Ui/Button/buttonComp";
     import ButtonHrefComp from "../../elements/Ui/Button/buttonHrefComp";
     export default {
-        components: {ButtonHrefComp, ButtonComp, IconPc, logoTingo },
+        components: {ButtonHrefComp, ButtonComp, logoTingo },
         name: 'navigation',
         data() {
             return {
