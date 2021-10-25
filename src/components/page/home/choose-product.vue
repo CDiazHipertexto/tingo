@@ -200,7 +200,7 @@
   .swiper
     width: 100%
     height: 700px
-
+    cursor: grab
   .swiper-slide
     text-align: center
     font-size: 18px
@@ -213,6 +213,7 @@
     border-radius: 10px
     height: auto !important
     .wrapper-card
+      cursor: pointer
       p.title
         font-size: 1.2em
         font-weight: 800

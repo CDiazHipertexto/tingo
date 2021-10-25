@@ -8,6 +8,7 @@
         categories
         choose-product
         pay-share
+        immedi-delivery
 </template>
 
 <script>
@@ -17,10 +18,11 @@ import homeBanner from "@/components/page/home/homeBanner";
 import categories from "@/components/page/home/categories";
 import chooseProduct from "@/components/page/home/choose-product";
 import payShare from "@/components/page/home/pay-share";
+import immediDelivery from "@/components/page/home/immedi-delivery";
 
 export default {
   name: 'home-one',
-  components: {navigation, homeBanner, categories, chooseProduct, payShare},
+  components: {navigation, homeBanner, categories, chooseProduct, payShare, immediDelivery},
   data() {
     return {
 

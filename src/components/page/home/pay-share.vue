@@ -8,7 +8,18 @@
               b-container.container-fluid.p-1
                 b-row.justify-content-between.align-items-center.p-2
                   b-col(sm='12', md='6', lg='6', xl='6')
-                    img(src='@/assets/food-dog.png', alt='up', width='100%')
+                    div.col-data-product
+                      img(src='@/assets/food-dog.png', alt='up', width='100%')
+                      p.txt-title Comida para perro
+                      p.txt-uni 24 Und
+                      div.line
+                        div.box-item
+                          p.text-intro Compra con amigo
+                          p.txt-price
+                            strong $8.750
+                          p.txt-uni UNIDAD A: $ 244
+                        div
+                          p.txt-dtc -35%
                   b-col.text-left(sm='12', md='6', lg='6', xl='6')
                     div.line-secon.p-2
                       div.wrapper-perfil
@@ -35,6 +46,19 @@
                         div.box-twitt
                           p.text-uppercase.text-name @LuisKMart
                           p.price-pack La comida para mi mascota ❤️
+                    div.social-share.p-2.mt-1
+                      div.wrapper-social
+                        p Compartir en
+                        ul
+                          li
+                            a
+                              img.avatar(src='@/assets/wp.png', alt='up', width='10px')
+                          li
+                            a
+                              img.avatar(src='@/assets/fb.png', alt='up', width='10px')
+                          li
+                            a
+                              img.avatar(src='@/assets/ms.png', alt='up', width='10px')
          b-col(xl='6', lg='6', md='12', sm='12', cols='12').flex-column.d-flex.justify-content-center
           section-heading
             template(slot='text-heading')
@@ -70,6 +94,36 @@ export default {
 <style lang="sass" scoped>
 @import "../../../scss/utilities/variables"
 #sectionShare
+  .col-data-product
+    p
+      margin: 0
+    .txt-title
+      margin-top: .5em
+      font-size: 1.2em
+      font-weight: 700
+    .txt-uni
+      color: #808080
+    .line
+      border: 1px solid #c1c1c1
+      padding: .41em
+      border-radius: 10px
+      margin-top: .5em
+      display: flex
+      align-items: center
+      justify-content: space-between
+      .text-intro
+        font-size: .7em
+        text-transform: uppercase
+      .txt-price
+        font-size: 1.2em
+      .txt-uni
+        font-size: .7em
+        text-transform: uppercase
+      .txt-dtc
+        font-size: 1.3em
+        font-weight: 700
+        color: $pinkDarkHex
+
   .text-left
     text-align: left
   .text-prg
@@ -78,6 +132,7 @@ export default {
   .wrapper-card
     border: 1px solid #606874
     border-radius: 10px
+    padding: .6em
     p.title
       font-size: 1.2em
       font-weight: 800
@@ -103,8 +158,21 @@ export default {
             font-size: .6em
       .wrapper-img
         img
-          width: 50px
+          width: 36px
           margin-right: .5em
+    .social-share
+      p
+        font-size: 1em
+      ul
+        list-style-type: none
+        display: flex
+        align-items: center
+        justify-content: space-around
+        margin: 0
+        padding: 0
+      img
+        width: 30px
+
   img
     display: block
     width: 100%
