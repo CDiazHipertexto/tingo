@@ -1,7 +1,6 @@
-<template>
-    <div class="home">
-      <h1>hola</h1>
-    </div>
+<template lang="pug">
+    div.home
+      h1 hola
 </template>
 
 <script>
@@ -27,4 +26,7 @@ export default {
   }
 }
 </script>
-
+<style lang="sass" scoped>
+  h1
+    background-color: blue
+</style>
