@@ -1,11 +1,13 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-// import Home from '../views/Home.vue'
+// import navigation from '../components/layout/nav/navigation.vue'
 
 
 // Views
 import homeOne from '@/views/homeOne/homeOne'
 import homeTwo from '@/views/homeTwo/homeTwo'
+// import navigation from '@/components/layout/nav/navigation'
+
 
 Vue.use(VueRouter)
 

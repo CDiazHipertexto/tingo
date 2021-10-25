@@ -1,12 +1,16 @@
 <template lang="pug">
-    div.home
-      h1 hola
+  //Layout
+  #content
+    navigation
 </template>
 
 <script>
+
+import navigation from '@/components/layout/nav/navigation'
+
 export default {
   name: 'home-one',
-  components: {},
+  components: {navigation},
   data() {
     return {
 
