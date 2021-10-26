@@ -14,7 +14,8 @@
                 .swiper.mySwiper
                   .swiper-wrapper
                     .swiper-slide
-                      div.w-100.wrapper-card
+                      input#check01(type='checkbox', name='check', value='1')
+                      label.w-100.wrapper-card.radio(for='check01')
                         b-container.container-fluid.p-1
                           b-row.justify-content-between.align-items-center.p-2
                             b-col(sm='12', md='6', lg='6', xl='6')
@@ -38,8 +39,10 @@
                                     p.price-uni UNIDAD A: $4.800
                                   div.wrapper-dtc
                                     p -15%
+                        div.check-card-bg
                     .swiper-slide
-                      div.w-100.wrapper-card
+                      input#check02(type='checkbox', name='check', value='2')
+                      label.w-100.wrapper-card.radio(for='check02')
                         b-container.container-fluid.p-1
                           b-row.justify-content-between.align-items-center.p-2
                             b-col(sm='12', md='6', lg='6', xl='6')
@@ -63,8 +66,10 @@
                                     p.price-uni UNIDAD A: $4.800
                                   div.wrapper-dtc
                                     p -15%
+                        div.check-card-bg
                     .swiper-slide
-                      div.w-100.wrapper-card
+                      input#check03(type='checkbox', name='check', value='3')
+                      label.w-100.wrapper-card.radio(for='check03')
                         b-container.container-fluid.p-1
                           b-row.justify-content-between.align-items-center.p-2
                             b-col(sm='12', md='6', lg='6', xl='6')
@@ -88,8 +93,10 @@
                                     p.price-uni UNIDAD A: $4.800
                                   div.wrapper-dtc
                                     p -15%
+                        div.check-card-bg
                     .swiper-slide
-                      div.w-100.wrapper-card
+                      input#check04(type='checkbox', name='check', value='4')
+                      label.w-100.wrapper-card.radio(for='check04')
                         b-container.container-fluid.p-1
                           b-row.justify-content-between.align-items-center.p-2
                             b-col(sm='12', md='6', lg='6', xl='6')
@@ -113,31 +120,7 @@
                                     p.price-uni UNIDAD A: $4.800
                                   div.wrapper-dtc
                                     p -15%
-                    .swiper-slide
-                      div.w-100.wrapper-card
-                        b-container.container-fluid.p-1
-                          b-row.justify-content-between.align-items-center.p-2
-                            b-col(sm='12', md='6', lg='6', xl='6')
-                              img(src='@/assets/img-fruit.png', alt='up', width='100%')
-                            b-col.text-left(sm='12', md='6', lg='6', xl='6')
-                              p.title Snacks para perro
-                              p.txt-und 1 Und
-                              div.line-secon.p-2
-                                div.wrapper-price
-                                  div.box-price
-                                    p.text-uppercase.text-shop Compra con un amigo
-                                    p.price-pack $4.800
-                                    p.price-uni UNIDAD A: $4.800
-                                  div.wrapper-dtc
-                                    p.max-dtc -50%
-                              div.line-secon.p-2.mt-1
-                                div.wrapper-price
-                                  div.box-price
-                                    p.text-uppercase.text-shop Compra con un amigo
-                                    p.price-pack $4.800
-                                    p.price-uni UNIDAD A: $4.800
-                                  div.wrapper-dtc
-                                    p -15%
+                        div.check-card-bg
                   //.swiper-pagination
 </template>
 
@@ -187,7 +170,7 @@
 <style lang="sass" scoped>
   @import "../../../scss/utilities/variables"
   h2
-    @media all and (max-width: 991px)
+    @media all and (max-width: 500px)
       font-size: 1.8em !important
   .bg-dark
     background-color: $greenDarkHex !important
@@ -213,18 +196,46 @@
     cursor: grab
     max-width: 500px
   .swiper-slide
-    text-align: center
-    font-size: 18px
-    background: transparent
-    display: flex
-    -webkit-box-pack: center
-    justify-content: center
-    align-items: center
-    border: 1px solid #606874
-    border-radius: 10px
-    height: auto !important
+    .check-card-bg
+      position: absolute
+      background: #000000
+      -webkit-transition: all .3s ease-out
+      transition: all .3s ease-out
+      -webkit-transform: scale(0)
+      transform: scale(0)
+      width: 40px
+      height: 36px
+      top: 10px
+      left: 10px
+      z-index: -1
+    input[type=checkbox]:checked ~ label
+      border: 1px solid $blueLightHex
+      .line-secon
+        border: 0.785729px solid $blueLightHex
+      .check-card-bg
+        -webkit-transform: scale(25)
+        transform: scale(25)
+
+    input
+      display: none
     .wrapper-card
+      text-align: center
+      font-size: 18px
+      background: transparent
+      display: flex
+      -webkit-box-pack: center
+      justify-content: center
+      align-items: center
+      border: 1px solid #606874
+      border-radius: 10px
+      height: auto !important
       cursor: pointer
+      overflow: hidden
+      position: relative
+      &:hover
+        transform: translate3d(0, -2px, 0) !important
+        box-shadow: 0 18px 35px rgb(50 50 93 / 1%), 0 8px 15px rgba(0, 0, 0, 0.07) !important
+        transition: .3s !important
       > .container
         font-size: 13px
       p.title

@@ -56,7 +56,8 @@
         @media all and (max-width: 991px)
           text-align: center
           margin: 0 0 1em 0
-          font-size: 1.7em !important
+          @media all and (max-width: 500px)
+            font-size: 1.7em !important
 
       p
         color: #1C2030

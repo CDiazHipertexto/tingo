@@ -43,6 +43,7 @@ export default {
       text-align: center
       margin-left: auto
       margin-right: auto
+  @media all and (max-width: 500px)
     h2
       font-size: 1.8em
   .col-data-product

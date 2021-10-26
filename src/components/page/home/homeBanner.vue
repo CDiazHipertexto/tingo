@@ -263,7 +263,7 @@
             @media all and (max-width: 991px)
               text-align: center !important
         h1
-          @media all and (max-width: 991px)
+          @media all and (max-width: 500px)
             font-size: 1.6em !important
         .center
             h1, h2, h3, h4, h5, h6, p

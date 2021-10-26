@@ -2,7 +2,7 @@
   //Portfolio
   section#sectionShare.py__section
     b-container.text-left
-      b-row(align-v='left')#sectionTitle.flex-md-column-reverse
+      b-row(align-v='left')#sectionTitle.reverse
          b-col(xl='6', lg='6', md='12', sm='12', cols='12')
             div.w-100.wrapper-card
               b-container.container-fluid.p-1
@@ -94,14 +94,19 @@ export default {
 @import "../../../scss/utilities/variables"
 #sectionShare
   @media all and (max-width: 991px)
+    .reverse
+      flex-direction: column-reverse
     .sectionTitle__block
       h2
         text-align: center
-        font-size: 1.8em
     p.text-intro
       text-align: center
       margin-left: auto !important
       margin-right: auto !important
+  @media all and (max-width: 500px)
+    .sectionTitle__block
+      h2
+        font-size: 1.8em
   .col-data-product
     p
       margin: 0

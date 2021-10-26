@@ -40,6 +40,10 @@ export default {
 .bg-dark
   background-color: $greenDarkHex !important
 #sectionViewHome
+  @media all and (max-width: 500px)
+    .sectionTitle__block
+      h2
+        font-size: 1.8em
   .col-data-product
     p
       margin: 0
