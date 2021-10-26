@@ -7,11 +7,12 @@
           section-heading
             template(slot='text-heading')
               h2.text-center CLICK PARA VER HOME 2
-          button-href-comp(href="").button.mt-4
+          button-href-comp(href="/home-two").button.mt-4
             template(slot='txt')
               i.fas.fa-envelope
-              span HOME DOS
-
+              span HOME DOS BTN COMPONENT
+          #nav
+            router-link(to='/home-two') HOME DOS BTN ROUTER
 </template>
 
 <script>
@@ -37,6 +38,16 @@ export default {
 
 <style lang="sass" scoped>
 @import "../../../scss/utilities/variables"
+#nav
+  text-align: center
+  a
+    padding: 1rem 3rem !important
+    color: #ffffff !important
+    width: auto
+    background: #1c2030
+    border: #1c2030
+    max-width: 300px
+    margin: auto
 .bg-dark
   background-color: $greenDarkHex !important
 #sectionViewHome
