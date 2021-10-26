@@ -34,7 +34,7 @@
                   div.line
                     b-container.container-fluid.p-0
                       b-row.justify-content-between.align-items-end
-                        b-col(sm='9', md='9', lg='9', xl='9', col='3')
+                        b-col(sm='9', md='9', lg='9', xl='9', cols='9')
                           div.wrapper-post
                             div.img
                               img.avatar(src='@/assets/user-arbolito.png', alt='up', width='30px')
@@ -47,7 +47,7 @@
                             div.content-perfil
                               p.user-name @arbolito
                               p.user-post ¡Quierooo un trago!
-                        b-col(sm='3', md='3', lg='3', xl='3', col='3')
+                        b-col(sm='3', md='3', lg='3', xl='3', cols='3')
                           div.mb-2
                             img.mb-3(src='@/assets/msg.png', alt='up', width='20px')
                             p 2
@@ -56,7 +56,7 @@
                             p 234
                           div.mb-0
                             img.mb-2(src='@/assets/img-user.png', alt='up', width='50px')
-                        b-col(sm='12', md='12', lg='12', xl='12')
+                        b-col(sm='12', md='12', lg='12', xl='12', cols='12')
                           div.bg-dark
                             b-container.container-fluid.p-1
                               b-row.justify-content-between.align-items-center.p-2
@@ -262,6 +262,9 @@
             color: #ffffff
             @media all and (max-width: 991px)
               text-align: center !important
+        h1
+          @media all and (max-width: 991px)
+            font-size: 1.6em !important
         .center
             h1, h2, h3, h4, h5, h6, p
                 text-align: center

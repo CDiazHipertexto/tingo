@@ -186,6 +186,9 @@
 
 <style lang="sass" scoped>
   @import "../../../scss/utilities/variables"
+  h2
+    @media all and (max-width: 991px)
+      font-size: 1.8em !important
   .bg-dark
     background-color: $greenDarkHex !important
   .py__section
@@ -258,6 +261,9 @@
       width: 17em
       height: 100%
       object-fit: cover
+      @media all and (max-width: 991px)
+        text-align: center
+        margin: 0 auto .5em
 </style>
 
 <style lang="sass">

@@ -43,6 +43,8 @@ export default {
       text-align: center
       margin-left: auto
       margin-right: auto
+    h2
+      font-size: 1.8em
   .col-data-product
     p
       margin: 0

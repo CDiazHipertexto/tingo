@@ -63,8 +63,7 @@
           section-heading
             template(slot='text-heading')
               h2 Paga y comparte
-          p.text-prg
-           p.m-0.text-intro
+          p.text-prg.m-0.mt-4.text-intro
             strong.d-block.mb-3 Comparte tu compra con un amigo.
             | Tienen 2 horas para completar la compra con amigos y recibir el mayor descuento para ambos compradores.
 
@@ -98,8 +97,11 @@ export default {
     .sectionTitle__block
       h2
         text-align: center
+        font-size: 1.8em
     p.text-intro
       text-align: center
+      margin-left: auto !important
+      margin-right: auto !important
   .col-data-product
     p
       margin: 0

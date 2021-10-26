@@ -56,6 +56,8 @@
         @media all and (max-width: 991px)
           text-align: center
           margin: 0 0 1em 0
+          font-size: 1.7em !important
+
       p
         color: #1C2030
     .text-left
@@ -76,6 +78,11 @@
       .wrapper-products
         display: flex
         justify-content: space-between
+        @media all and (max-width: 991px)
+          flex-direction: column
+          img
+            width: 120px
+            margin: auto
         .item-product
           display: flex
           flex-direction: column
