@@ -196,6 +196,7 @@
     cursor: grab
     max-width: 500px
   .swiper-slide
+    height: auto !important
     .check-card-bg
       position: absolute
       background: #000000
