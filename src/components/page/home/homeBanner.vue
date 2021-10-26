@@ -60,9 +60,9 @@
                           div.bg-dark
                             b-container.container-fluid.p-1
                               b-row.justify-content-between.align-items-center.p-2
-                                b-col(sm='6', md='6', lg='6', xl='6', col='6')
+                                b-col(sm='6', md='6', lg='6', xl='6', cols='6')
                                     img(src='@/assets/img-fruit.png', alt='up', width='100%')
-                                b-col.text-left(sm='6', md='6', lg='6', xl='6', col='6')
+                                b-col.text-left(sm='6', md='6', lg='6', xl='6', cols='6')
                                   p Audífonos  Boots.
                                   p.txt-und 1 Und
                                   div.line-secon
