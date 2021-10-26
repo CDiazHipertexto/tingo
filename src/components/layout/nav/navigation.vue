@@ -15,12 +15,12 @@
                     ul.navbar-nav.ml-auto.my-2.my-lg-0
                         li.nav-item.item-cart
                           a
-                            img(src='@/assets/cart.svg', alt='up', width='20px')
+                            img.cart(src='@/assets/cart.svg', alt='up', width='20px')
                             p 0
                         li.nav-item.item-user
                           a
-                            img(src='@/assets/user.svg', alt='up', width='20px')
-                            p 0
+                            img.hambur(src='@/assets/hambur.png', alt='up', width='15px')
+                            img.user(src='@/assets/user.svg', alt='up', width='25px')
                           //button-href-comp(href="href").button.btn.large.btn-navigation
                               template(slot='txt')
                                   | 0
@@ -92,7 +92,7 @@
           height: 36px
           border: 0
           outline: none
-          color: #000000
+          color: #ffffff
           margin: 0
           top: auto
           z-index: 1
@@ -101,6 +101,7 @@
           border-radius: 10px
           &::placeholder
             color: #ffffff
+            font-size: .8em
     #mainNav *
       transition: all .6s ease
       .navbar-nav
@@ -115,16 +116,20 @@
           a
             margin: 0 .5em
             padding: 0.5em 1em
-            color: #1C2030
+            color: #fff
         li.item-cart
           a
-            background-color: #F8F8F9
+            background: rgba(28, 32, 48, 0.4)
             border-radius: 5px
         li.item-user
           a
-            background-color: #F8F8F9
+            background: rgba(28, 32, 48, 0.4)
             border-radius: 15px
-
+            img.user
+              background-color: #131620
+              border-radius: 50px
+              padding: .31em
+              margin-left: .4em
     .navbar-brand
       padding: .8em
       background: $greenDarkHex
@@ -161,6 +166,7 @@
             .navbar-nav
                 a
                   border: 1px solid #1C2030
+                  background-color: $greenDarkHex !important
         .btn-navigation
             background: rgba(0, 0, 0, 0.4)
             color: #ffffff

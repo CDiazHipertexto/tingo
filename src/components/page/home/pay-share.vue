@@ -2,7 +2,7 @@
   //Portfolio
   section#sectionShare.py__section
     b-container.text-left
-      b-row(align-v='left')#sectionTitle
+      b-row(align-v='left')#sectionTitle.flex-md-column-reverse
          b-col(xl='6', lg='6', md='12', sm='12', cols='12')
             div.w-100.wrapper-card
               b-container.container-fluid.p-1
@@ -64,9 +64,9 @@
             template(slot='text-heading')
               h2 Paga y comparte
           p.text-prg
-           p.m-0
-            strong Comparte tu compra con un amigo.
-           | Tienen 2 horas para completar la compra con amigos y recibir el mayor descuento para ambos compradores.
+           p.m-0.text-intro
+            strong.d-block.mb-3 Comparte tu compra con un amigo.
+            | Tienen 2 horas para completar la compra con amigos y recibir el mayor descuento para ambos compradores.
 
 </template>
 
@@ -94,6 +94,12 @@ export default {
 <style lang="sass" scoped>
 @import "../../../scss/utilities/variables"
 #sectionShare
+  @media all and (max-width: 991px)
+    .sectionTitle__block
+      h2
+        text-align: center
+    p.text-intro
+      text-align: center
   .col-data-product
     p
       margin: 0
@@ -134,6 +140,9 @@ export default {
     border-radius: 10px
     padding: .6em
     max-width: 490px
+    @media all and (max-width: 991px)
+      text-align: center
+      margin: 1.5em auto 3em
     p.title
       font-size: 1.2em
       font-weight: 800

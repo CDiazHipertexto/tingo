@@ -1,6 +1,6 @@
 <template lang="pug">
     //Portfolio
-    section#sectionVideoCorp.py__section.bg-dark
+    section#sectionChoose.py__section.bg-dark
         b-container.text-white.text-left
             b-row(align-v='left')#sectionTitle
               b-col(xl='6', lg='6', md='12', sm='12', cols='12').flex-column.d-flex.justify-content-center
@@ -191,12 +191,19 @@
   .py__section
     padding-bottom: 0
     padding-top: 0
-  #sectionVideoCorp
+    @media all and (max-width: 991px)
+      padding-top: 5em
+  #sectionChoose
     .text-left
       text-align: left
+      @media all and (max-width: 991px)
+        text-align: center
     .text-prg
       margin-top: 2em
       max-width: 400px
+      @media all and (max-width: 991px)
+        text-align: center
+        margin: 1.5em auto 3em
   .swiper
     width: 100%
     height: 600px
@@ -257,7 +264,7 @@
     @import "../../../scss/utilities/variables"
     @import "../../../scss/utilities/mixins"
     $gap: 20px
-    #sectionVideoCorp
+    #sectionChoose
         @media all and (max-width: 1280px)
             .pry
                 padding-top: 0 !important

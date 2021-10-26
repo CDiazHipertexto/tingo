@@ -53,16 +53,26 @@
         font-weight: 600
         text-align: left
         margin-left: 1em
+        @media all and (max-width: 991px)
+          text-align: center
+          margin: 0 0 1em 0
       p
         color: #1C2030
     .text-left
       text-align: left
       font-size: 1.5em
+      @media all and (max-width: 991px)
+        text-align: center
+        margin: 0 0 0 0
     .wrapper-block
       display: flex
       align-items: center
+      @media all and (max-width: 991px)
+        flex-direction: column-reverse
       > div
         width: 50%
+        @media all and (max-width: 991px)
+          width: 100%
       .wrapper-products
         display: flex
         justify-content: space-between

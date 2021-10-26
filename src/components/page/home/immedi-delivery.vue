@@ -38,6 +38,11 @@ export default {
 .bg-dark
   background-color: $greenDarkHex !important
 #sectionDelivery
+  @media all and (max-width: 991px)
+    h2, p
+      text-align: center
+      margin-left: auto
+      margin-right: auto
   .col-data-product
     p
       margin: 0

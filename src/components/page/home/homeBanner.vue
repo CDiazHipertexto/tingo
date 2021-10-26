@@ -34,7 +34,7 @@
                   div.line
                     b-container.container-fluid.p-0
                       b-row.justify-content-between.align-items-end
-                        b-col(sm='9', md='9', lg='9', xl='9')
+                        b-col(sm='9', md='9', lg='9', xl='9', col='3')
                           div.wrapper-post
                             div.img
                               img.avatar(src='@/assets/user-arbolito.png', alt='up', width='30px')
@@ -47,7 +47,7 @@
                             div.content-perfil
                               p.user-name @arbolito
                               p.user-post ¡Quierooo un trago!
-                        b-col(sm='3', md='3', lg='3', xl='3')
+                        b-col(sm='3', md='3', lg='3', xl='3', col='3')
                           div.mb-2
                             img.mb-3(src='@/assets/msg.png', alt='up', width='20px')
                             p 2
@@ -60,9 +60,9 @@
                           div.bg-dark
                             b-container.container-fluid.p-1
                               b-row.justify-content-between.align-items-center.p-2
-                                b-col(sm='12', md='6', lg='6', xl='6')
+                                b-col(sm='6', md='6', lg='6', xl='6', col='6')
                                     img(src='@/assets/img-fruit.png', alt='up', width='100%')
-                                b-col.text-left(sm='12', md='6', lg='6', xl='6')
+                                b-col.text-left(sm='6', md='6', lg='6', xl='6', col='6')
                                   p Audífonos  Boots.
                                   p.txt-und 1 Und
                                   div.line-secon
@@ -146,6 +146,10 @@
     padding: .5em
     font-size: 14px
     line-height: 1
+    @media all and (max-width: 991px)
+      min-height: 298px
+      margin-top: 1em
+      border-radius: 16px
     .wrapper-post
       display: flex
       text-align: left
@@ -236,9 +240,12 @@
             .default
                 background-color: $blueLightHex
         &--fixed-height
-            min-height: 70vh
-            height: 70vh
+            min-height: 640px
+            height: 640px
             z-index: 2
+            @media all and (max-width: 991px)
+              min-height: 705px
+              height: 705px
             .vueperslides__inner
               min-height: inherit !important
         &__arrow
@@ -253,6 +260,8 @@
         line-height: 1.6
         h1, h2, h3, h4, h5, h6, p
             color: #ffffff
+            @media all and (max-width: 991px)
+              text-align: center !important
         .center
             h1, h2, h3, h4, h5, h6, p
                 text-align: center
