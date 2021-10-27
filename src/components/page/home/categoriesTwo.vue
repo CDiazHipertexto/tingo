@@ -4,7 +4,7 @@
         b-container()
             b-row.mb-5
               b-col(sm='12', md='12', lg='12', xl='12')
-                h3.text-left Nuestras categorías
+                h3.section--title Compra con amigos
             b-row
               b-col(sm='12', md='12', lg='12', xl='12')
                 div.wrapper-block.d-flex
@@ -24,8 +24,6 @@
                       label.w-100.wrapper-card.radio(for='check03')
                         img(src='@/assets/mascotas.png', alt='mascotas', width='100%')
                         p Mascotas
-                  div.text-intro
-                    h2 La nueva forma de compra con amigos
 
 
 </template>
@@ -35,7 +33,7 @@
     import { TabsPlugin } from 'bootstrap-vue'
 
     export default {
-        name: "categories",
+        name: "categories-two",
         components: { VueMaterial, TabsPlugin },
         data: () => ({
 
@@ -50,72 +48,74 @@
 </script>
 
 <style scoped lang="sass">
-    @import "../../../scss/utilities/variables"
-    #sectionBenefits
+  @import "../../../scss/utilities/variables"
+  #sectionBenefits
 
-      input[type=checkbox]:checked ~ label
-        img
-          border: 2px solid $blueLightHex
-        p
-          font-weight: 700
-
-      input
-        display: none
-      .bg-dark__PLP
-          background: $greenDarkHex
-      h2
-        font-size: 3em
-        font-weight: 600
-        text-align: left
-        margin-left: 1em
-        @media all and (max-width: 991px)
-          text-align: center
-          margin: 0 0 1em 0
-          @media all and (max-width: 500px)
-            font-size: 1.7em !important
-
+    input[type=checkbox]:checked ~ label
+      img
+        border: 2px solid $blueLightHex
       p
-        color: #1C2030
-    .text-left
+        font-weight: 700
+
+    input
+      display: none
+
+    .bg-dark__PLP
+        background: $greenDarkHex
+    h2
+      font-size: 3em
+      font-weight: 600
       text-align: left
-      font-size: 1.5em
+      margin-left: 1em
       @media all and (max-width: 991px)
         text-align: center
-        margin: 0 0 0 0
-    .wrapper-block
-      display: flex
-      align-items: center
+        margin: 0 0 1em 0
+        @media all and (max-width: 500px)
+          font-size: 1.7em !important
+
+    p
+      color: #1C2030
+  .text-left
+    text-align: left
+    font-size: 1.8em
+    font-weight: 700
+    @media all and (max-width: 991px)
+      text-align: center
+      margin: 0 0 0 0
+  .wrapper-block
+    display: flex
+    align-items: center
+    @media all and (max-width: 991px)
+      flex-direction: column-reverse
+    > div
+      width: 50%
       @media all and (max-width: 991px)
-        flex-direction: column-reverse
-      > div
-        width: 50%
-        @media all and (max-width: 991px)
-          width: 100%
-      .wrapper-products
+        width: 100%
+    .wrapper-products
+      display: flex
+      justify-content: space-between
+      @media all and (max-width: 991px)
+        flex-direction: column
+        img
+          width: 120px
+          margin: auto
+      .item-product
         display: flex
-        justify-content: space-between
-        @media all and (max-width: 991px)
-          flex-direction: column
-          img
-            width: 120px
-            margin: auto
-        .item-product
-          display: flex
-          flex-direction: column
-          img
-            background: #F8F8F9
-            border-radius: 20px
+        flex-direction: column
+        img
+          background: #F8F8F9
+          border-radius: 20px
+          transition: .3s !important
+          &:hover
+            transform: translate3d(0, -2px, 0) !important
+            box-shadow: 0 18px 35px rgb(50 50 93 / 1%), 0 8px 15px rgb(0 0 0 / 7%) !important
             transition: .3s !important
-            &:hover
-              transform: translate3d(0, -2px, 0) !important
-              box-shadow: 0 18px 35px rgb(50 50 93 / 1%), 0 8px 15px rgb(0 0 0 / 7%) !important
-              transition: .3s !important
-          p
-            color: #1C2030
-            margin-top: 1em
-            font-size: 1.3em
-      .text-intro
-        display: flex
+        p
+          color: #1C2030
+          margin-top: 1em
+          font-size: 1.3em
+    .text-intro
+      display: flex
 
 </style>
 

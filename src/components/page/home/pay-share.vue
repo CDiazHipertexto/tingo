@@ -111,29 +111,7 @@ export default {
       h2
         font-size: 1.8em
   .col-data-product
-    .wrapper-towishlist
-      position: relative
-      &:hover > .towishlist
-        transform: translateY(0)
-        opacity: 1
-        visibility: visible
-    .towishlist
-      position: absolute
-      bottom: 0
-      right: 0
-      width: 35px
-      height: 35px
-      display: flex
-      align-items: center
-      justify-content: center
-      background: #ffffff
-      border: 1px solid #d3d3d3
-      border-radius: 100%
-      box-shadow: 0 3px 5px rgb(51 51 51 / 30%)
-      transform: translateY(-100%)
-      opacity: 0
-      visibility: hidden
-      transition: 0.3s all ease
+
     p
       margin: 0
     .txt-title

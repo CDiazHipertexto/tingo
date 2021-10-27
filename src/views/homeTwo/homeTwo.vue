@@ -5,18 +5,20 @@
     main.prehome
       article
         home-banner-two
-        categories
+        categories-two
+        feature-product
 </template>
 
 <script>
 
 import navigationTwo from '@/components/layout/nav/navigation-two';
 import homeBannerTwo from "@/components/page/home/homeBannerTwo";
-import categories from "@/components/page/home/categories";
+import categoriesTwo from "@/components/page/home/categoriesTwo";
+import featureProduct from "@/components/page/home/feature-product";
 
 export default {
   name: 'home-two',
-  components: {navigationTwo, homeBannerTwo, categories},
+  components: {navigationTwo, homeBannerTwo, categoriesTwo, featureProduct},
   data() {
     return {
 
