@@ -154,7 +154,7 @@
         },
       mounted() {
         let swiper = new Swiper(".mySwiper", {
-          slidesPerView: 2+1/3,
+          slidesPerView: 2+1/2,
           direction: "horizontal",
           spaceBetween: 10,
           centeredSlides: false,

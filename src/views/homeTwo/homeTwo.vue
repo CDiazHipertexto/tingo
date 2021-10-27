@@ -7,6 +7,8 @@
         home-banner-two
         categories-two
         feature-product
+        feature-product
+        feature-product
 </template>
 
 <script>
